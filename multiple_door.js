@@ -147,6 +147,14 @@ $(function () {
                         console.log('Такая фотография есть!');
                         doorImg.attr('src', github_url + 'two_doors/' + String(door) + '/inner/' + String(doorInnerColor) + '.jpeg'); // это переписать
                     }).fail(function () {
+                    
+                    $.get(github_url + 'two_doors/' + door + '/inner/' + doorInnerColor + '.jpg').done(function () {
+                        console.log('Такая фотография есть!');
+                        doorImg.attr('src', github_url + 'two_doors/' + String(door) + '/inner/' + String(doorInnerColor) + '.jpg'); // это переписать
+                    }).fail(function () { 
+                               throw new Error('И фотографии с jpg тоже нет ! :/');
+                    }); 
+                    
                     throw new Error('Такой фотографии нет! :/');
                 })
             }
