@@ -147,7 +147,14 @@ $(function () {
                         console.log('Такая фотография есть!');
                         doorImg.attr('src', github_url + 'two_doors/' + String(door) + '/inner/' + String(doorInnerColor) + '.jpeg'); // это переписать
                     }).fail(function () {
-                    throw new Error('Такой фотографии нет! :/');
+
+                    $.get(github_url + 'two_doors/' + door + '/inner/' + doorInnerColor + '.jpg').done(function () {
+                        console.log('Такая фотография есть!');
+                        doorImg.attr('src', github_url + 'two_doors/' + String(door) + '/inner/' + String(doorInnerColor) + '.jpg'); // это переписать
+                    }).fail(function () {
+                        throw new Error('Фтографии в формате .jpg нет ! Проверьте путь :/');
+                    });
+                    throw new Error('Фотографии в форматом .jpeg нет! Проверьте путь :/');
                 })
             }
             if (e.target.parentElement.href.indexOf('#doorOuterColor') != -1) {
@@ -156,7 +163,15 @@ $(function () {
                         console.log('Такая фотография есть');
                         doorImg.attr('src', github_url + 'two_doors/' + String(door) + '/outer/' + String(doorOuterColor) + '.jpeg'); // это переписать
                     }).fail(function () {
-                    throw new Error('Такой фотографии нет! :/');
+
+                    $.get(github_url + 'two_doors/' + door + '/outer/' + doorOuterColor + '.jpg').done(function () {
+                        console.log('Такая фотография есть!');
+                        doorImg.attr('src', github_url + 'two_doors/' + String(door) + '/outer/' + String(doorOuterColor) + '.jpg'); // это переписать
+                    }).fail(function () {
+                        throw new Error('Фтографии в формате .jpg нет ! Проверьте путь :/');
+                    });
+                    throw new Error('Фотографии в форматом .jpeg нет! Проверьте путь :/');
+
                 })
             }
         }
@@ -168,7 +183,14 @@ $(function () {
                     .done(function () {
                         doorImg.attr('src', github_url + String(door) + '/' + String(color) + String(glass) + '.jpeg'); // это переписать
                     }).fail(function () {
-                    throw new Error('Такой фотографии нет! :/');
+
+                    $.get(github_url + 'one_door/' + door + '/' + color + glass + '.jpg').done(function () {
+                        console.log('Такая фотография есть!');
+                        doorImg.attr('src', github_url + String(door) + '/' + String(color) + String(glass) + '.jpg'); // это переписать
+                    }).fail(function () {
+                        throw new Error('Фтографии в формате .jpg нет ! Проверьте путь :/');
+                    });
+                    throw new Error('Фотографии в форматом .jpeg нет! Проверьте путь :/');
                 })
             }
         }
