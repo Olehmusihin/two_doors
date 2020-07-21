@@ -223,7 +223,8 @@
     cursor: pointer; }
 
 #interview input {
-    background-color: #64a900;
+    background-color: #00548c
+        ;
     font-family: 'GothaProBol';
     color: white;
     text-transform: uppercase; }
@@ -323,12 +324,12 @@
     background-color: #262626; }
 .drop-down ul li {
     list-style-type: none;
-    background-color: #64a900;
+    background-color: #00548c;
     font-family: 'GothaProMed';
     color: white;
     padding: 10px 10px 10px 10px; }
 .drop-down ul li:hover {
-    background-color: #64a900;
+    background-color: #00548c;
     background-position: 0 -10px; }
 .drop-down ul li:first-child {
     padding: 10px 10px 10px 10px; }
