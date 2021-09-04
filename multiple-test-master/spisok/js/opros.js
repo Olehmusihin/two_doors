@@ -8,9 +8,12 @@ $(function () {
 
     /* ~ SCRIPT FOR SINGLE DROPDOWN CHOICE ~*/
     $('.spisok.single').click(function (e) {
-        console.log("Clicked dropdown");
         var target = e.target;
+        console.log("Clicked dropdown, e", e);
+        
         var ulElement = $(target).siblings("ul")[0];
+        console.log("Clicked dropdown, ulElement", ulElement);
+        
         ulElement.style.display == 'none' ? ulElement.style.display = 'inherit' : ulElement.style.display = 'none';
         for (var i = 0; i < $('.drop-down.single ul').length; i++) {
             $('.drop-down.single ul')[i] != ulElement ? $('.drop-down.single ul')[i].style.display = 'none' : '';
