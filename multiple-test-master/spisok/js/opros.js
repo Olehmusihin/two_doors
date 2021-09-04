@@ -8,6 +8,7 @@ $(function () {
 
     /* ~ SCRIPT FOR SINGLE DROPDOWN CHOICE ~*/
     $('.spisok.single').click(function (e) {
+        console.log("Clicked dropdown");
         var target = e.target;
         var ulElement = $(target).siblings("ul")[0];
         ulElement.style.display == 'none' ? ulElement.style.display = 'inherit' : ulElement.style.display = 'none';
